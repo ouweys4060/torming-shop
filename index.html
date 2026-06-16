@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torming_ | Scripts & Apps Python</title>
+    <title>Torming_ | Shinobi Viewer & Scripts</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -12,7 +12,7 @@
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">Torming_</div>
+            <div class="logo">⚡ Torming_</div>
             <ul class="nav-links">
                 <li><a href="#produits">Produits</a></li>
                 <li><a href="#apropos">À propos</a></li>
@@ -37,14 +37,16 @@
         <div class="hero-bg"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge fade-in">Développeur Indépendant</div>
-                <h1 class="fade-in">Scripts & Applications<br><span class="gradient-text">Python sur mesure</span></h1>
-                <p class="subtitle fade-in">Des solutions numériques prêtes à l'emploi.<br>Simple, efficace, abordable.</p>
+                <div class="hero-badge fade-in">👋 Développeur Indépendant</div>
+                <h1 class="fade-in">Applications & Scripts<br><span class="gradient-text">par Torming_</span></h1>
+                <p class="subtitle fade-in">Des outils numériques de qualité, développés avec passion.<br>Simple, efficace, abordable.</p>
                 <div class="hero-badges fade-in">
-                    <span class="badge">Python</span>
-                    <span class="badge">Livraison rapide</span>
-                    <span class="badge">Support Discord</span>
-                    <span class="badge">Code commenté</span>
+                    <span class="badge">🐍 Python</span>
+                    <span class="badge">⚙️ C++</span>
+                    <span class="badge">🌙 Lua</span>
+                    <span class="badge">🌐 Web</span>
+                    <span class="badge">☕ Java</span>
+                    <span class="badge">💬 Support Discord</span>
                 </div>
                 <div class="hero-buttons fade-in">
                     <a href="#produits" class="cta-button">Voir les produits</a>
@@ -70,94 +72,58 @@
 
             <div class="product-grid">
 
-                <!-- Produit 1 - Application -->
-                <div class="product-card" data-aos>
-                    <div class="product-top">
-                        <span class="product-badge app">APP</span>
-                    </div>
-                    <div class="product-icon">📱</div>
-                    <h3>Mon Application Premium</h3>
-                    <p class="product-description">
-                        Une application complète et intuitive. Interface moderne, facile à installer et à utiliser dès le premier lancement.
-                    </p>
-                    <ul class="product-features">
-                        <li>Installation simple</li>
-                        <li>Documentation complète</li>
-                        <li>Support Discord inclus</li>
-                        <li>Mises à jour gratuites</li>
-                    </ul>
-                    <div class="product-footer">
-                        <span class="price">29€</span>
-                        <button class="buy-button" onclick="openContact('Application Premium - 29€')">Commander</button>
-                    </div>
-                </div>
-
-                <!-- Produit 2 - Script Python -->
-                <div class="product-card" data-aos>
-                    <div class="product-top">
-                        <span class="product-badge script">SCRIPT</span>
-                    </div>
-                    <div class="product-icon">🐍</div>
-                    <h3>Script Python - Automation</h3>
-                    <p class="product-description">
-                        Script d'automatisation puissant pour te faire gagner du temps sur des tâches répétitives. Plug & Play.
-                    </p>
-                    <ul class="product-features">
-                        <li>Code commenté ligne par ligne</li>
-                        <li>Facile à personnaliser</li>
-                        <li>Guide d'utilisation inclus</li>
-                        <li>Compatible Python 3.x</li>
-                    </ul>
-                    <div class="product-footer">
-                        <span class="price">15€</span>
-                        <button class="buy-button" onclick="openContact('Script Python Automation - 15€')">Commander</button>
-                    </div>
-                </div>
-
-                <!-- Produit 3 - Pack Scripts (FEATURED) -->
+                <!-- Produit 1 - Shinobi Viewer -->
                 <div class="product-card featured" data-aos>
                     <div class="product-top">
-                        <span class="product-badge popular">POPULAIRE</span>
+                        <span class="product-badge popular">⭐ POPULAIRE</span>
                     </div>
-                    <div class="product-icon"></div>
-                    <h3>Pack 5 Scripts Python</h3>
+                    <div class="product-icon">📖</div>
+                    <h3>Shinobi Viewer</h3>
                     <p class="product-description">
-                        Ma sélection de 5 scripts les plus utiles : automation, scraping, data processing, bots et plus encore.
+                        L'application ultime pour lire tes mangas. Interface moderne, fluide et pensée pour les vrais lecteurs de manga.
                     </p>
                     <ul class="product-features">
-                        <li>5 scripts complets</li>
-                        <li>Économise plus de 50%</li>
-                        <li>Bonus : Templates réutilisables</li>
-                        <li>Accès à vie + mises à jour</li>
+                        <li>✅ Lecture de mangas fluide</li>
+                        <li>✅ Interface moderne & intuitive</li>
+                        <li>✅ Essai gratuit disponible</li>
+                        <li>✅ Support Discord inclus</li>
+                        <li>✅ Mises à jour gratuites</li>
                     </ul>
+                    <div class="trial-banner">
+                        🎁 Essai gratuit disponible — sans engagement !
+                    </div>
                     <div class="product-footer">
                         <div class="prices">
-                            <span class="price-old">75€</span>
-                            <span class="price">39€</span>
+                            <span class="price">5€</span>
+                            <span class="price-trial">Essai gratuit</span>
                         </div>
-                        <button class="buy-button" onclick="openContact('Pack 5 Scripts Python - 39€')">Commander</button>
+                        <div class="product-buttons">
+                            <button class="buy-button" onclick="openContact('Shinobi Viewer - 5€', false)">Acheter</button>
+                            <button class="trial-button" onclick="openContact('Shinobi Viewer - Essai Gratuit', true)">Essayer</button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Produit 4 - Sur mesure -->
+                <!-- Produit 2 - Script Sur Mesure -->
                 <div class="product-card" data-aos>
                     <div class="product-top">
                         <span class="product-badge custom">CUSTOM</span>
                     </div>
                     <div class="product-icon">⚙️</div>
-                    <h3>Script Sur Mesure</h3>
+                    <h3>Script / App Sur Mesure</h3>
                     <p class="product-description">
-                        Tu as un besoin spécifique ? Je développe ton script 100% personnalisé selon tes besoins.
+                        Tu as un projet ou une idée ? Je développe ta solution 100% personnalisée selon tes besoins et ton budget.
                     </p>
                     <ul class="product-features">
-                        <li>100% personnalisé</li>
-                        <li>Révisions incluses</li>
-                        <li>Livraison rapide</li>
-                        <li>Code source complet fourni</li>
+                        <li>✅ Python, C++, Lua, Java...</li>
+                        <li>✅ Web : HTML / CSS / JS</li>
+                        <li>✅ 100% personnalisé</li>
+                        <li>✅ Révisions incluses</li>
+                        <li>✅ Code source complet fourni</li>
                     </ul>
                     <div class="product-footer">
                         <span class="price">Sur devis</span>
-                        <button class="buy-button" onclick="openContact('Script Sur Mesure')">Me contacter</button>
+                        <button class="buy-button" onclick="openContact('Script Sur Mesure', false)">Me contacter</button>
                     </div>
                 </div>
 
@@ -174,9 +140,19 @@
                         <h2>À Propos</h2>
                         <p>Qui suis-je ?</p>
                     </div>
-                    <p>Salut ! Je suis <strong>Torming_</strong>, développeur passionné qui crée des outils numériques pratiques et accessibles.</p>
-                    <p>Je me spécialise dans le développement Python : scripts d'automatisation, applications desktop, bots et bien plus encore.</p>
-                    <p>Chaque produit est testé, documenté et livré avec mon support Discord personnel pour t'aider à bien démarrer.</p>
+                    <p>👋 Salut ! Je suis <strong>Torming_</strong>, développeur indépendant passionné qui crée des outils numériques pratiques et accessibles.</p>
+                    <p>🛠️ Je maîtrise un large panel de technologies : <strong>Python, C++, Lua, Java, HTML, CSS et JavaScript</strong>. Chaque projet est développé avec soin, quelle que soit la techno nécessaire.</p>
+                    <p>📖 Mon dernier projet en date : <strong>Shinobi Viewer</strong>, une application de lecture de mangas moderne et fluide.</p>
+                    <p>💡 Chaque produit est livré avec mon support Discord personnel pour t'aider à bien démarrer sans prise de tête.</p>
+                    <div class="skills">
+                        <span class="skill">🐍 Python</span>
+                        <span class="skill">⚙️ C++</span>
+                        <span class="skill">🌙 Lua</span>
+                        <span class="skill">☕ Java</span>
+                        <span class="skill">🌐 HTML</span>
+                        <span class="skill">🎨 CSS</span>
+                        <span class="skill">⚡ JavaScript</span>
+                    </div>
                     <div class="about-links">
                         <a href="https://github.com/ouweys4060" target="_blank" class="about-link github">
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
@@ -194,6 +170,10 @@
                 </div>
                 <div class="stats">
                     <div class="stat">
+                        <span class="stat-number">7+</span>
+                        <span class="stat-label">Langages maîtrisés</span>
+                    </div>
+                    <div class="stat">
                         <span class="stat-number">100%</span>
                         <span class="stat-label">Support garanti</span>
                     </div>
@@ -202,11 +182,7 @@
                         <span class="stat-label">Livraison max</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">🐍</span>
-                        <span class="stat-label">Python spécialiste</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number"></span>
+                        <span class="stat-number">⭐</span>
                         <span class="stat-label">Qualité garantie</span>
                     </div>
                 </div>
@@ -223,28 +199,28 @@
             </div>
             <div class="faq-grid">
                 <div class="faq-item" data-aos>
-                    <h3>Comment commander ?</h3>
-                    <p>Clique sur "Commander" sur le produit de ton choix, puis contacte-moi sur Discord <strong>@Torming_</strong> ou rejoins mon serveur <a href="https://discord.gg/9Vg2ehtycc" target="_blank">discord.gg/9Vg2ehtycc</a></p>
+                    <h3>💬 Comment commander ?</h3>
+                    <p>Clique sur "Acheter" ou "Essayer" sur le produit de ton choix, puis contacte-moi sur Discord <strong>@Torming_</strong> ou rejoins mon serveur <a href="https://discord.gg/9Vg2ehtycc" target="_blank">discord.gg/9Vg2ehtycc</a></p>
                 </div>
                 <div class="faq-item" data-aos>
-                    <h3>Moyens de paiement ?</h3>
-                    <p>Paiement via <strong>PayPal</strong> ou <strong>virement bancaire</strong>. Tout est discuté et sécurisé via Discord avant l'achat.</p>
+                    <h3>💳 Moyens de paiement acceptés ?</h3>
+                    <p>J'accepte le paiement <strong>en liquide (IRL)</strong> et par <strong>carte via PayPal</strong>. Pour tout autre moyen de paiement, ouvre un ticket sur mon serveur Discord !</p>
                 </div>
                 <div class="faq-item" data-aos>
-                    <h3>Délai de livraison ?</h3>
-                    <p>Livraison du fichier <strong>sous 24h maximum</strong> après paiement. En général beaucoup plus rapide ! Directement sur Discord.</p>
+                    <h3>🎁 Comment fonctionne l'essai gratuit ?</h3>
+                    <p>L'essai gratuit de <strong>Shinobi Viewer</strong> est disponible sans engagement. Contacte-moi sur Discord pour l'obtenir et tester l'application avant d'acheter.</p>
+                </div>
+                <div class="faq-item" data-aos>
+                    <h3>⏱️ Délai de livraison ?</h3>
+                    <p>Livraison du fichier <strong>sous 24h maximum</strong> après paiement. En général beaucoup plus rapide ! Directement via Discord.</p>
                 </div>
                 <div class="faq-item" data-aos>
                     <h3>🛠️ Support inclus ?</h3>
-                    <p>Oui ! Support Discord inclus avec chaque achat. Je t'aide à installer et utiliser ton produit sans problème.</p>
+                    <p>Oui ! Le support Discord est inclus avec chaque achat. Je t'aide à installer et utiliser ton produit sans prise de tête.</p>
                 </div>
                 <div class="faq-item" data-aos>
-                    <h3>Remboursement ?</h3>
-                    <p>Si le produit ne fonctionne pas comme décrit, je te rembourse ou je corrige le problème. Ta satisfaction est ma priorité.</p>
-                </div>
-                <div class="faq-item" data-aos>
-                    <h3>Script personnalisé ?</h3>
-                    <p>Oui ! Contacte-moi sur Discord <strong>@Torming_</strong> pour discuter de ton besoin. Je ferai un devis gratuit et rapide.</p>
+                    <h3>⚙️ Projet sur mesure ?</h3>
+                    <p>Contacte-moi sur Discord <strong>@Torming_</strong> pour discuter de ton projet. Je maîtrise Python, C++, Lua, Java, HTML, CSS et JavaScript. Devis gratuit et rapide !</p>
                 </div>
             </div>
         </div>
@@ -266,7 +242,7 @@
                         Rejoindre le serveur
                     </a>
                     <a href="https://discord.com/users/Torming_" target="_blank" class="banner-btn dm">
-                        DM @Torming_
+                        💬 DM @Torming_
                     </a>
                 </div>
             </div>
@@ -279,7 +255,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">⚡ Torming_</div>
-                    <p>Scripts & Applications Python<br>de qualité, livrés sur Discord.</p>
+                    <p>Applications & Scripts de qualité,<br>livrés sur Discord.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navigation</h4>
@@ -304,7 +280,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Torming_ — Tous droits réservés</p>
+                <p>&copy; 2026 Torming_ — Tous droits réservés</p>
             </div>
         </div>
     </footer>
@@ -312,29 +288,4 @@
     <!-- Modal Contact -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeContact()">&times;</span>
-            <div class="modal-icon">💬</div>
-            <h2>Commander</h2>
-            <p class="modal-product-name" id="productName"></p>
-            <p class="modal-desc">Contacte-moi sur Discord pour finaliser ta commande :</p>
-            <div class="contact-methods">
-                <a href="https://discord.com/users/Torming_" target="_blank" class="contact-button discord-dm">
-                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
-                    </svg>
-                    DM @Torming_ sur Discord
-                </a>
-                <a href="https://discord.gg/9Vg2ehtycc" target="_blank" class="contact-button discord-server">
-                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
-                    </svg>
-                    Rejoindre le serveur Discord
-                </a>
-            </div>
-            <p class="payment-info">💳 Paiement via PayPal ou virement · Livraison sous 24h</p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+            <span class="close" 
