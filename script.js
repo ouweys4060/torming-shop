@@ -1,4 +1,10 @@
-// ===================== MENU BURGER =====================
+// ===== HEADER SCROLL =====
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// ===== BURGER MENU =====
 function toggleMenu() {
     document.querySelector('.nav-links').classList.toggle('open');
 }
@@ -9,78 +15,57 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// ===================== MODAL =====================
-function openContact(productName, isTrial) {
-    const modal = document.getElementById('contactModal');
-    const productNameEl = document.getElementById('productName');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalIcon = document.getElementById('modalIcon');
-    const modalDesc = document.getElementById('modalDesc');
-    const paymentSection = document.getElementById('paymentSection');
+// ===== FAQ =====
+function toggleFaq(item) {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+}
 
-    productNameEl.textContent = productName;
-
-    if (isTrial) {
-        // Mode essai gratuit
-        modalIcon.textContent = '🎁';
-        modalTitle.textContent = 'Essai Gratuit';
-        modalDesc.textContent = 'Contacte-moi sur Discord pour recevoir ton essai gratuit de Shinobi Viewer :';
-        paymentSection.style.display = 'none';
-    } else {
-        // Mode achat normal
-        modalIcon.textContent = '💬';
-        modalTitle.textContent = 'Commander';
-        modalDesc.textContent = 'Contacte-moi sur Discord pour finaliser ta commande :';
-        paymentSection.style.display = 'block';
-    }
-
-    modal.style.display = 'block';
+// ===== MODAL ACHAT =====
+function openBuy() {
+    document.getElementById('buyModal').classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-function closeContact() {
-    document.getElementById('contactModal').style.display = 'none';
+function closeBuy() {
+    document.getElementById('buyModal').classList.remove('active');
     document.body.style.overflow = '';
 }
 
+function closeBuyOnOverlay(e) {
+    if (e.target === document.getElementById('buyModal')) closeBuy();
+}
+
 document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeContact();
+    if (e.key === 'Escape') closeBuy();
 });
 
-window.addEventListener('click', e => {
-    const modal = document.getElementById('contactModal');
-    if (e.target === modal) closeContact();
-});
-
-// ===================== SMOOTH SCROLL =====================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+// ===== SMOOTH SCROLL =====
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
         const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-});
-
-// ===================== ANIMATIONS SCROLL =====================
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.classList.add('visible');
-            }, index * 120);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
-}, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
 });
 
-document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+// ===== ANIMATIONS ENTREE =====
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-// ===================== HEADER SCROLL =====================
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    header.style.boxShadow = window.scrollY > 50
-        ? '0 2px 30px rgba(0,0,0,0.12)'
-        : '0 1px 20px rgba(0,0,0,0.08)';
+document.querySelectorAll('.example-card, .shinobi-features li, .lang-item, .faq-item').forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = `opacity 0.5s ease ${i * 0.06}s, transform 0.5s ease ${i * 0.06}s`;
+    observer.observe(el);
 });
