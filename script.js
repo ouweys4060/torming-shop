@@ -1,10 +1,8 @@
 // ===================== MENU BURGER =====================
 function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('open');
+    document.querySelector('.nav-links').classList.toggle('open');
 }
 
-// Fermer le menu en cliquant sur un lien
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         document.querySelector('.nav-links').classList.remove('open');
@@ -12,10 +10,30 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // ===================== MODAL =====================
-function openContact(productName) {
+function openContact(productName, isTrial) {
     const modal = document.getElementById('contactModal');
     const productNameEl = document.getElementById('productName');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalIcon = document.getElementById('modalIcon');
+    const modalDesc = document.getElementById('modalDesc');
+    const paymentSection = document.getElementById('paymentSection');
+
     productNameEl.textContent = productName;
+
+    if (isTrial) {
+        // Mode essai gratuit
+        modalIcon.textContent = '🎁';
+        modalTitle.textContent = 'Essai Gratuit';
+        modalDesc.textContent = 'Contacte-moi sur Discord pour recevoir ton essai gratuit de Shinobi Viewer :';
+        paymentSection.style.display = 'none';
+    } else {
+        // Mode achat normal
+        modalIcon.textContent = '💬';
+        modalTitle.textContent = 'Commander';
+        modalDesc.textContent = 'Contacte-moi sur Discord pour finaliser ta commande :';
+        paymentSection.style.display = 'block';
+    }
+
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
@@ -25,13 +43,11 @@ function closeContact() {
     document.body.style.overflow = '';
 }
 
-// Fermer avec Escape
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeContact();
 });
 
-// Fermer en cliquant à l'extérieur
-window.addEventListener('click', function(e) {
+window.addEventListener('click', e => {
     const modal = document.getElementById('contactModal');
     if (e.target === modal) closeContact();
 });
@@ -41,19 +57,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
 
-// ===================== ANIMATIONS AU SCROLL =====================
+// ===================== ANIMATIONS SCROLL =====================
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
             setTimeout(() => {
                 entry.target.classList.add('visible');
-            }, index * 100);
+            }, index * 120);
         }
     });
 }, {
@@ -61,16 +75,12 @@ const observer = new IntersectionObserver((entries) => {
     rootMargin: '0px 0px -50px 0px'
 });
 
-document.querySelectorAll('[data-aos]').forEach(el => {
-    observer.observe(el);
-});
+document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
 
-// ===================== HEADER SCROLL EFFECT =====================
+// ===================== HEADER SCROLL =====================
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.style.boxShadow = '0 2px 30px rgba(0,0,0,0.12)';
-    } else {
-        header.style.boxShadow = '0 1px 20px rgba(0,0,0,0.08)';
-    }
+    header.style.boxShadow = window.scrollY > 50
+        ? '0 2px 30px rgba(0,0,0,0.12)'
+        : '0 1px 20px rgba(0,0,0,0.08)';
 });
