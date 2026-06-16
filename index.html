@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets Numériques - Scripts & Apps</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">💻 DevShop</div>
+            <ul class="nav-links">
+                <li><a href="#produits">Produits</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in">Scripts & Applications sur mesure</h1>
+            <p class="subtitle fade-in">Des solutions numériques prêtes à l'emploi pour simplifier votre quotidien</p>
+            <a href="#produits" class="cta-button fade-in">Découvrir mes produits</a>
+        </div>
+    </section>
+
+    <!-- Produits Section -->
+    <section id="produits" class="products">
+        <div class="container">
+            <h2>Mes Produits</h2>
+            
+            <div class="product-grid">
+                <!-- Produit 1 - Application -->
+                <div class="product-card">
+                    <div class="product-badge">APP</div>
+                    <div class="product-icon">📱</div>
+                    <h3>Mon Application Premium</h3>
+                    <p class="product-description">
+                        Une application complète qui résout [ton problème]. Interface moderne et facile à utiliser.
+                    </p>
+                    <ul class="product-features">
+                        <li>✅ Installation simple</li>
+                        <li>✅ Documentation complète</li>
+                        <li>✅ Support inclus</li>
+                        <li>✅ Mises à jour gratuites</li>
+                    </ul>
+                    <div class="product-footer">
+                        <span class="price">29€</span>
+                        <button class="buy-button" onclick="openContact('Application Premium')">Acheter</button>
+                    </div>
+                </div>
+
+                <!-- Produit 2 - Script Python -->
+                <div class="product-card">
+                    <div class="product-badge">SCRIPT</div>
+                    <div class="product-icon">🐍</div>
+                    <h3>Script Python - Automation</h3>
+                    <p class="product-description">
+                        Script d'automatisation pour [tâche spécifique]. Gagne du temps au quotidien.
+                    </p>
+                    <ul class="product-features">
+                        <li>✅ Code commenté</li>
+                        <li>✅ Facile à personnaliser</li>
+                        <li>✅ Guide d'utilisation</li>
+                        <li>✅ Python 3.x compatible</li>
+                    </ul>
+                    <div class="product-footer">
+                        <span class="price">15€</span>
+                        <button class="buy-button" onclick="openContact('Script Python Automation')">Acheter</button>
+                    </div>
+                </div>
+
+                <!-- Produit 3 - Pack Scripts -->
+                <div class="product-card featured">
+                    <div class="product-badge popular">POPULAIRE</div>
+                    <div class="product-icon">📦</div>
+                    <h3>Pack 5 Scripts Python</h3>
+                    <p class="product-description">
+                        Collection de 5 scripts utiles : scraping, automation, data processing, etc.
+                    </p>
+                    <ul class="product-features">
+                        <li>✅ 5 scripts complets</li>
+                        <li>✅ Économise 50%</li>
+                        <li>✅ Bonus : Templates</li>
+                        <li>✅ Accès à vie</li>
+                    </ul>
+                    <div class="product-footer">
+                        <span class="price-old">75€</span>
+                        <span class="price">39€</span>
+                        <button class="buy-button" onclick="openContact('Pack 5 Scripts')">Acheter</button>
+                    </div>
+                </div>
+
+                <!-- Produit 4 - Script personnalisé -->
+                <div class="product-card">
+                    <div class="product-badge">CUSTOM</div>
+                    <div class="product-icon">⚙️</div>
+                    <h3>Script Sur Mesure</h3>
+                    <p class="product-description">
+                        Besoin d'un script spécifique ? Je développe selon tes besoins.
+                    </p>
+                    <ul class="product-features">
+                        <li>✅ 100% personnalisé</li>
+                        <li>✅ Révisions incluses</li>
+                        <li>✅ Livraison rapide</li>
+                        <li>✅ Code source fourni</li>
+                    </ul>
+                    <div class="product-footer">
+                        <span class="price">Sur devis</span>
+                        <button class="buy-button" onclick="openContact('Script Sur Mesure')">Me contacter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2>À Propos</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>👋 Salut ! Je suis un développeur passionné qui crée des solutions numériques pratiques.</p>
+                    <p>Mes produits sont testés, documentés et prêts à l'emploi. Je privilégie la qualité et la simplicité.</p>
+                    <p>💡 Chaque achat inclut mon support pour t'aider à bien démarrer !</p>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Clients satisfaits</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Support garanti</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24h</span>
+                        <span class="stat-label">Livraison moyenne</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContact()">&times;</span>
+            <h2>Commander : <span id="productName"></span></h2>
+            <p>Envoie-moi un message pour finaliser ton achat :</p>
+            
+            <div class="contact-methods">
+                <a href="mailto:ton-email@exemple.com?subject=Commande: " id="emailLink" class="contact-button email">
+                    📧 Par Email
+                </a>
+                <a href="https://wa.me/33XXXXXXXXX?text=Bonjour, je souhaite commander: " id="whatsappLink" target="_blank" class="contact-button whatsapp">
+                    💬 Par WhatsApp
+                </a>
+            </div>
+            
+            <p class="payment-info">💳 Paiement sécurisé via PayPal ou virement</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DevShop - Tous droits réservés</p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
