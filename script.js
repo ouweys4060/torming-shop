@@ -1,70 +1,76 @@
-// Modal Contact
+// ===================== MENU BURGER =====================
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('open');
+}
+
+// Fermer le menu en cliquant sur un lien
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('open');
+    });
+});
+
+// ===================== MODAL =====================
 function openContact(productName) {
     const modal = document.getElementById('contactModal');
-    const productNameSpan = document.getElementById('productName');
-    const emailLink = document.getElementById('emailLink');
-    const whatsappLink = document.getElementById('whatsappLink');
-    
-    productNameSpan.textContent = productName;
-    
-    // Personnalise les liens
-    emailLink.href = `mailto:ton-email@exemple.com?subject=Commande: ${productName}&body=Bonjour, je souhaite commander: ${productName}`;
-    whatsappLink.href = `https://wa.me/33XXXXXXXXX?text=Bonjour, je souhaite commander: ${productName}`;
-    
+    const productNameEl = document.getElementById('productName');
+    productNameEl.textContent = productName;
     modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
 }
 
 function closeContact() {
     document.getElementById('contactModal').style.display = 'none';
+    document.body.style.overflow = '';
 }
 
 // Fermer avec Escape
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        closeContact();
-    }
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeContact();
 });
 
 // Fermer en cliquant à l'extérieur
-window.onclick = function(event) {
+window.addEventListener('click', function(e) {
     const modal = document.getElementById('contactModal');
-    if (event.target == modal) {
-        closeContact();
-    }
-}
+    if (e.target === modal) closeContact();
+});
 
-// Smooth scroll
+// ===================== SMOOTH SCROLL =====================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
 
-// Animation au scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
+// ===================== ANIMATIONS AU SCROLL =====================
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            setTimeout(() => {
+                entry.target.classList.add('visible');
+            }, index * 100);
         }
     });
-}, observerOptions);
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
 
-document.querySelectorAll('.product-card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.6s, transform 0.6s';
-    observer.observe(card);
+document.querySelectorAll('[data-aos]').forEach(el => {
+    observer.observe(el);
+});
+
+// ===================== HEADER SCROLL EFFECT =====================
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.style.boxShadow = '0 2px 30px rgba(0,0,0,0.12)';
+    } else {
+        header.style.boxShadow = '0 1px 20px rgba(0,0,0,0.08)';
+    }
 });
