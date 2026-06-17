@@ -74,121 +74,155 @@
     </section>
 
     <!-- Shinobi Viewer -->
-    <section id="shinobi" class="section-shinobi">
-        <div class="container">
-            <div class="shinobi-inner">
-                <div class="shinobi-info">
-                    <span class="tag">Application Android</span>
-                    <h2>Shinobi Viewer</h2>
-                    <p class="shinobi-desc">
-                        L'application pensée pour les vrais lecteurs de manga.
-                        Interface épurée, lecture fluide, aucune pub. Juste toi et tes mangas.
-                    </p>
-                    <ul class="shinobi-features">
-                        <li>
-                            <span class="feat-icon">📖</span>
-                            <div>
-                                <strong>Lecture fluide</strong>
-                                <p>Navigation rapide entre les chapitres, scroll vertical ou horizontal</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feat-icon">🎨</span>
-                            <div>
-                                <strong>Interface moderne</strong>
-                                <p>Design soigné, mode sombre, agréable à utiliser au quotidien</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feat-icon">🔄</span>
-                            <div>
-                                <strong>Mises à jour gratuites</strong>
-                                <p>Toutes les futures versions incluses dans ton achat</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feat-icon">💬</span>
-                            <div>
-                                <strong>Support Discord</strong>
-                                <p>Je t'aide si tu as le moindre souci d'installation</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="shinobi-actions">
-                        <div class="price-block">
-                            <span class="price-amount">5€</span>
-                            <span class="price-note">achat unique · accès à vie</span>
+<section id="shinobi" class="section-shinobi">
+    <div class="container">
+        <div class="shinobi-inner">
+            <div class="shinobi-info">
+                <span class="tag">Application Android</span>
+                <h2>Shinobi Viewer</h2>
+                <p class="shinobi-desc">
+                    L'application pensée pour les vrais lecteurs de manga.
+                    Interface épurée, lecture fluide, aucune pub. Juste toi et tes mangas.
+                </p>
+                <ul class="shinobi-features">
+                    <li>
+                        <span class="feat-icon">📖</span>
+                        <div>
+                            <strong>Lecture fluide</strong>
+                            <p>Navigation rapide entre les chapitres, scroll vertical ou horizontal</p>
                         </div>
-                        <div class="shinobi-buttons">
-                            <button class="btn btn-primary" onclick="openBuy()">Acheter — 5€</button>
-                            <a
-                                href="https://github.com/ouweys4060/shinobi-viewer-app/releases/download/1.2/Shinobi.viewer.apk"
-                                class="btn btn-outline"
-                                download
-                            >
-                                ⬇ Essai gratuit
-                            </a>
+                    </li>
+                    <li>
+                        <span class="feat-icon">🎨</span>
+                        <div>
+                            <strong>Interface moderne</strong>
+                            <p>Design soigné, mode sombre, agréable à utiliser au quotidien</p>
                         </div>
-                        <p class="trial-note">L'essai est gratuit et sans engagement. Achète seulement si tu aimes !</p>
+                    </li>
+                    <li>
+                        <span class="feat-icon">🔄</span>
+                        <div>
+                            <strong>Mises à jour gratuites</strong>
+                            <p>Toutes les futures versions incluses dans ton achat</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feat-icon">💬</span>
+                        <div>
+                            <strong>Support Discord</strong>
+                            <p>Je t'aide si tu as le moindre souci d'installation</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="shinobi-actions">
+                    <div class="price-block">
+                        <span class="price-amount">5€</span>
+                        <span class="price-note">achat unique · accès à vie</span>
                     </div>
+                    <div class="shinobi-buttons">
+                        <button class="btn btn-primary" onclick="openBuy()">Acheter — 5€</button>
+                        <a
+                            href="https://github.com/ouweys4060/shinobi-viewer-app/releases/download/1.2/Shinobi.viewer.apk"
+                            class="btn btn-outline"
+                            download
+                        >
+                            ⬇ Essai gratuit
+                        </a>
+                    </div>
+                    <p class="trial-note">L'essai est gratuit et sans engagement. Achète seulement si tu aimes !</p>
                 </div>
-                <div class="shinobi-mockup">
-                    <div class="phone-frame">
-                        <div class="phone-screen">
-                            <div class="app-header">
-                                <span>📖 Shinobi Viewer</span>
-                                <span>v1.2</span>
+            </div>
+
+            <!-- NOUVEAU MOCKUP FIDÈLE À L'IMAGE -->
+            <div class="shinobi-mockup">
+                <div class="phone-frame">
+                    <!-- Barre de statut -->
+                    <div class="status-bar">
+                        <span class="status-time">13:05</span>
+                        <div class="status-icons">
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M1 1l22 22M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 12.55a10.94 10.94 0 0 1 5.17-2.39M10.71 5.05A16 16 0 0 1 22.56 9M1.42 9a15.91 15.91 0 0 1 4.7-2.88M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+                            <span style="font-size:0.6rem; font-weight:700;">91</span>
+                        </div>
+                    </div>
+
+                    <div class="phone-screen">
+                        <!-- App Header -->
+                        <div class="app-topbar">
+                            <div class="app-logo-icon">
+                                <span>📖</span>
                             </div>
-                            <div class="app-manga-list">
-                                <div class="manga-item active">
-                                    <div class="manga-cover">⛩</div>
-                                    <div class="manga-info">
-                                        <span class="manga-title">Demon Slayer</span>
-                                        <span class="manga-ch">Ch. 205</span>
-                                    </div>
-                                </div>
-                                <div class="manga-item">
-                                    <div class="manga-cover">🌊</div>
-                                    <div class="manga-info">
-                                        <span class="manga-title">One Piece</span>
-                                        <span class="manga-ch">Ch. 1100</span>
-                                    </div>
-                                </div>
-                                <div class="manga-item">
-                                    <div class="manga-cover">⚡</div>
-                                    <div class="manga-info">
-                                        <span class="manga-title">Naruto</span>
-                                        <span class="manga-ch">Ch. 700</span>
-                                    </div>
-                                </div>
-                                <div class="manga-item">
-                                    <div class="manga-cover">👊</div>
-                                    <div class="manga-info">
-                                        <span class="manga-title">Jujutsu Kaisen</span>
-                                        <span class="manga-ch">Ch. 236</span>
-                                    </div>
-                                </div>
-                                <div class="manga-item">
-                                    <div class="manga-cover">🗡</div>
-                                    <div class="manga-info">
-                                        <span class="manga-title">Bleach</span>
-                                        <span class="manga-ch">Ch. 686</span>
-                                    </div>
-                                </div>
+                            <div class="app-search">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                                <span>Rechercher...</span>
                             </div>
-                            <div class="app-nav">
-                                <span class="nav-active">🏠</span>
-                                <span>🔍</span>
-                                <span>📚</span>
-                                <span>⚙️</span>
+                            <div class="app-settings">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
                             </div>
+                        </div>
+
+                        <!-- Grille de mangas -->
+                        <div class="manga-grid">
+
+                            <!-- Death Note -->
+                            <div class="manga-card">
+                                <div class="manga-cover-img" style="background: linear-gradient(160deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);">
+                                    <div class="manga-cover-content death-note">
+                                        <div class="dn-title">DE←←HNO←E</div>
+                                        <div class="dn-ryuk">👻</div>
+                                        <div class="dn-light">🧑</div>
+                                    </div>
+                                </div>
+                                <div class="manga-label">DEATH NOTE</div>
+                            </div>
+
+                            <!-- Demon Slayer -->
+                            <div class="manga-card">
+                                <div class="manga-cover-img" style="background: linear-gradient(160deg, #0d1b2a 0%, #1b2838 50%, #2d3a4a 100%);">
+                                    <div class="manga-cover-content demon-slayer">
+                                        <div class="ds-chars">⚔️🌸</div>
+                                        <div class="ds-title">鬼滅の刃</div>
+                                    </div>
+                                </div>
+                                <div class="manga-label">DEMON SLAYER</div>
+                            </div>
+
+                            <!-- Dr Stone -->
+                            <div class="manga-card">
+                                <div class="manga-cover-img" style="background: linear-gradient(160deg, #1a0a00 0%, #3d1c00 50%, #7a3b00 100%);">
+                                    <div class="manga-cover-content dr-stone">
+                                        <div class="dst-title">Dr.STONE</div>
+                                        <div class="dst-char">🧪⚗️</div>
+                                    </div>
+                                </div>
+                                <div class="manga-label">DR STONE</div>
+                            </div>
+
+                            <!-- Food Wars -->
+                            <div class="manga-card">
+                                <div class="manga-cover-img" style="background: linear-gradient(160deg, #0a1628 0%, #1e3a5f 50%, #2d5a8e 100%);">
+                                    <div class="manga-cover-content food-wars">
+                                        <div class="fw-chars">👨‍🍳🍽️</div>
+                                        <div class="fw-title">食戟のソーマ</div>
+                                    </div>
+                                </div>
+                                <div class="manga-label">FOOD WARS</div>
+                            </div>
+
+                        </div>
+
+                        <!-- Barre de nav Android -->
+                        <div class="android-nav">
+                            <span>▮▮▮</span>
+                            <span>⬤</span>
+                            <span>◀</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
+    
     <!-- Script sur mesure -->
     <section id="custom" class="section-custom">
         <div class="container">
