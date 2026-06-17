@@ -424,16 +424,43 @@ nav {
     align-items: center;
 }
 
+/* ===== PHONE MOCKUP NETTOYÉ ===== */
 .phone-frame {
     width: 240px;
-    background: var(--bg3);
+    background: #000;
     border-radius: 36px;
-    border: 2px solid var(--border);
+    border: 2px solid rgba(255,255,255,0.1);
     overflow: hidden;
-    box-shadow:
-        0 0 0 8px var(--bg2),
-        0 0 0 9px var(--border),
-        0 40px 80px rgba(0,0,0,0.5);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-screen {
+    background: #000;
+    height: 460px; /* Taille fixe du téléphone */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.phone-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* Remplit le cadre sans déformer */
+    object-position: top;  /* Affiche le haut de ton image */
+    display: block;
+}
+
+/* Garde ceci pour la barre du bas */
+.android-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: #000;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    color: #888;
+    font-size: 0.7rem;
 }
 
 .phone-screen {
